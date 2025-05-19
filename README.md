@@ -1,5 +1,10 @@
 Numerical codes used in "To reser or not to reset in a finite domain: that is the question", written by Gregorio García-Valladares, Antonio Prados, Alessandro Manacorda and Carlos A. Plata
 
-- File "HomogeneousResetting_BetaDistribution.nb" contains equations from (3) to (7) (and top panel of Figure 2) of main text and Section II from Supplementary Material.
-- File "HeterogeneousResetting_BetaDistribution.nb" contains equations from (8) to (11) (and bottom panel of Figure 2) of main text and Section III from Supplementary Material.
-- 
+- File "HomogeneousResetting_BetaDistribution.nb" contains derivations of equations (3) to (7) (and top panel of Figure 2) of main text and Section II from Supplementary Material.
+- File "HeterogeneousResetting_BetaDistribution.nb" contains derivations of equations (8) to (11) (and bottom panel of Figure 2) of main text and Section III from Supplementary Material.
+- File "TransitionsToNonZeroResetting_PolynomialDistributions.nb" contains the analysis of when bulk resetting is optimal depending on the parameter that describes the polynomial distributions (i) $P(x_T;a)=a x_T^2 + (4-3a)x_T^4+\frac{7}{30}(-9+8a)x_T^6$ and (ii) $P_{\mbox{pol},n}(x_T;b)=a_n(b)+b|x|^n$ (Section V of Supplementary Material).
+- File "DeltaPeakOptimisation_6thPolynomialDistribution.nb" contains the calculus of parameters that optimize the family of bulk resetting $r(x_0)=\frac{u}{x_R}(\delta (x_0-x_R)+\delta(x_0+x_R))$ with the target distribution $P(x_T;a)=a x_T^2 + (4-3a)x_T^4+\frac{7}{30}(-9+8a)x_T^6$ (Section V-A of Supplementary Material).
+- File "DeltaPeakOptimalFamily_6thPolynomialDistribution.nb" contains the proof that the family $r(x_0)=\frac{u}{x_R} ( \delta (x_0-x_R)+\delta (x_0+x_R) )$ with the optimal parameters is the actual optimal strategy using the target distribution $P(x_T;a)=a x_T^2 + (4-3a)x_T^4+\frac{7}{30}(-9+8a)x_T^6$ (Section V-A of Supplementary Material).
+- File "gradientDescent_Optimisation.m" contains the code to find the optimal heterogeneous bulk resetting that minimizes the averaged mean-first passage time for any target distribution (theory: Section IV of Supplementary Material; Results: Figure 3 of main text, Figures 5 and 6 of Supplementary Material). It calls two functions
+  * File "fcost_v2.m" constains the code that computes the averaged mean-first passage time $\bar{\tau}\[r\]$ given the current resetting function and the target distribution.
+  * File "fder_v2.m" constains the code that computes the functional derivative $\mu(x)$ given the current resetting function and the target distribution.
